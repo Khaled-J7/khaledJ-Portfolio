@@ -1,3 +1,7 @@
+/* src/index.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* We will add our global theme styles here later */
