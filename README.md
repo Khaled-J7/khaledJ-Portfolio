@@ -1,2 +1,2 @@
 # khaledJ-Portfolio
-Descp: A guthub repo for the portfolio website
+Descp: A github repo for the portfolio website
