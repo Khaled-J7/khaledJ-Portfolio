@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap');
+
+.section {
+	min-height: 100vh;
+	padding-top: 100px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.mainContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 100px;
+	flex-grow: 1;
+}
+
+.profileImg {
+	width: 350px;
+	height: 350px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 4px solid rgba(0, 198, 255, 0.5);
+	box-shadow: 0 0 30px rgba(0, 198, 255, 0.4);
+}
+
+.title {
+	font-weight: 700;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+}
+
+.wordFull,
+.wordStack {
+	background: linear-gradient(90deg, #ff00cc, #c500ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.wordFull {
+	font-family: 'Playfair Display', serif;
+	font-size: 4rem;
+}
+
+.wordStack {
+	font-family: 'Oswald', sans-serif;
+	font-size: 4.5rem;
+	text-transform: uppercase;
+	padding-left: 20px;
+}
+
+.wordDeveloper {
+	font-family: 'Lora', serif;
+	font-size: 4.2rem;
+	padding-left: 40px;
+	/* Applying a very subtle gradient from off-white to light pink */
+	background: linear-gradient(90deg, #f4f4f5, #f9468e);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.description {
+	font-family: 'Outfit', sans-serif;
+	font-size: 1.3rem;
+	line-height: 1.7;
+	color: #f4f4f5;
+}
+
+.buttonContainer {
+	margin-top: 30px;
+	display: flex;
+	gap: 20px;
+}
+
+.btn {
+	font-family: 'Russo One', sans-serif;
+	font-weight: 400;
+	font-size: 1.1rem;
+	text-decoration: none;
+	color: #0a192f;
+	background: linear-gradient(90deg, #64ffda, #a7f3d0);
+	padding: 12px 24px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+	transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn:hover {
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 7px 25px rgba(100, 255, 218, 0.5);
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(10, 220, 145, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 10px rgba(10, 220, 145, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(10, 220, 145, 0);
+	}
+}
+
+@keyframes slideUpFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.imageContainer {
+	position: relative;
+}
+
+.statusBubble {
+	position: absolute;
+	top: 20px;
+	left: -20px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 10px 20px;
+	border-radius: 50px;
+	font-weight: 600;
+	color: #fff;
+	z-index: 5;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	animation: slideUpFadeIn 0.5s ease 1s forwards;
+}
+
+.statusDot {
+	width: 12px;
+	height: 12px;
+	background-color: #0adc91;
+	border-radius: 50%;
+	animation: pulse 2s infinite;
+}
+
+.statusBubble::after {
+	content: '';
+	position: absolute;
+	bottom: -6px;
+	right: 40px;
+	width: 12px;
+	height: 12px;
+	background: rgba(255, 255, 255, 0.1);
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	transform: rotate(-45deg);
+	backdrop-filter: blur(10px);
+}
+
+@media (max-width: 992px) {
+	.title {
+		text-align: center;
+		padding: 0;
+	}
+	.wordFull,
+	.wordStack,
+	.wordDeveloper {
+		padding-left: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.mainContent {
+		padding: 0 40px;
+		text-align: center;
+	}
+	.wordFull {
+		font-size: 3rem;
+	}
+	.wordStack {
+		font-size: 3.5rem;
+	}
+	.wordDeveloper {
+		font-size: 3.2rem;
+	}
+	.profileImg {
+		width: 280px;
+		height: 280px;
+	}
+	.buttonContainer {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.statusBubble {
+		top: -15px;
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.statusBubble::after {
+		left: 50%;
+		transform: translateX(-50%) rotate(45deg);
+	}
+}

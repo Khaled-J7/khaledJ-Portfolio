@@ -1,0 +1,201 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slideInRight {
+	from {
+		transform: translateX(50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+	transition: background-color 0.4s ease-in-out; /* For smooth transition */
+}
+
+.logo {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 700;
+	text-decoration: none;
+	background: linear-gradient(90deg, #00c6ff, #0072ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	cursor: pointer;
+}
+
+.rightSide {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.links {
+	list-style: none;
+	display: flex;
+	gap: 35px;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.links a {
+	text-decoration: none;
+	position: relative;
+	padding-bottom: 5px;
+	cursor: pointer;
+	background: linear-gradient(90deg, #00c6ff, #0072ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	transition: filter 0.3s ease;
+}
+
+.links a:hover {
+	filter: brightness(1.5);
+}
+
+.socialLinks {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	border-left: 2px solid rgba(255, 255, 255, 0.2);
+	padding-left: 40px;
+}
+
+.socialIcon svg {
+	fill: rgba(255, 255, 255, 0.8);
+	transition: all 0.3s ease;
+}
+
+.socialIcon:hover svg {
+	transform: scale(1.15) translateY(-2px);
+}
+
+.githubIcon:hover svg {
+	fill: #000000;
+}
+.linkedinIcon:hover svg {
+	fill: #0a66c2;
+}
+.gmailIcon:hover svg {
+	fill: #ea4335;
+}
+
+.menuBtn button {
+	background: none;
+	border: none;
+	color: #f4f4f5;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+.menuBtn button:hover {
+	transform: scale(1.1);
+}
+.closeBtn {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+.closeBtn:hover {
+	transform: scale(1.1) rotate(90deg);
+}
+.menuOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(2, 12, 27, 0.95);
+	backdrop-filter: blur(5px);
+	z-index: 1001;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.menuOverlay.menuOpen {
+	opacity: 1;
+	visibility: visible;
+}
+.menuOverlayLinks {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+.menuOverlayLinks li {
+	margin: 20px 0;
+	opacity: 0;
+}
+.menuOverlay.menuOpen .menuOverlayLinks li {
+	animation: slideInRight 0.5s ease forwards;
+}
+.menuOverlay.menuOpen .menuOverlayLinks li:nth-child(1) {
+	animation-delay: 0.2s;
+}
+.menuOverlay.menuOpen .menuOverlayLinks li:nth-child(2) {
+	animation-delay: 0.3s;
+}
+.menuOverlay.menuOpen .menuOverlayLinks li:nth-child(3) {
+	animation-delay: 0.4s;
+}
+.menuOverlay.menuOpen .menuOverlayLinks li:nth-child(4) {
+	animation-delay: 0.5s;
+}
+.menuOverlayLinks a {
+	font-size: 2rem;
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+.menuOverlayLinks a:hover {
+	color: #add100;
+}
+.socials {
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+	gap: 40px;
+	opacity: 0;
+	animation: fadeIn 0.5s ease 0.8s forwards;
+}
+.socials a {
+	color: rgba(255, 255, 255, 0.7);
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+.socials a:hover {
+	color: #add100;
+	transform: translateY(-5px);
+}
+
+/* --- NEW: Style for the navbar when scrolled --- */
+.scrolled {
+	background-color: rgba(10, 25, 47, 0.85); /* Semi-transparent dark blue */
+	backdrop-filter: blur(10px);
+}

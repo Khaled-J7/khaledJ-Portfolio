@@ -1,0 +1,12 @@
+.app {
+	width: 100%;
+}
+
+.placeholderSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* vh stands for viewport height. 100vh = full screen height */
+	font-size: 3rem;
+	font-weight: bold;
+}

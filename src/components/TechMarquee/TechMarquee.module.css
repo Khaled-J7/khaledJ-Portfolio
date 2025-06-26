@@ -1,0 +1,49 @@
+@keyframes scrollAnimation {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.marquee {
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0;
+	-webkit-mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 20%,
+		black 80%,
+		transparent
+	);
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 20%,
+		black 80%,
+		transparent
+	);
+}
+
+.track {
+	display: flex;
+	gap: 40px;
+	width: fit-content;
+	/* UPDATED: Increased duration for a smoother, slower scroll with the full list */
+	animation: scrollAnimation 150s linear infinite;
+}
+
+.icon {
+	height: 50px;
+	/* REMOVED: No more grayscale filter */
+	opacity: 0.9; /* A slight opacity to make the hover effect pop */
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+	/* On hover, bring the icon to full opacity and scale it up */
+	opacity: 1;
+	transform: scale(1.1);
+}
