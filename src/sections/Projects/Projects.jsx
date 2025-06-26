@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './Projects.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// --- CORRECT: Importing images so Vite can track them ---
+import studySquadImg from '../../assets/project-images/Study_Squad_thumbnail.png';
+import barberFactoryImg from '../../assets/project-images/BarberFactory_thumbnail.png';
+import taskFlowImg from '../../assets/project-images/Task_Flow_thumbnail.png';
+import azizParfumeriesImg from '../../assets/project-images/AzizParfumeries_thumbnail.png';
+import seeMoreImg from '../../assets/project-images/SEE_OTHER_PROJECTS_thumbnail.png';
+
 const projectsData = [
 	{
-		image: '/src/assets/project-images/Study_Squad_thumbnail.png',
+		image: studySquadImg, // Use the imported variable
 		title: 'StudySquad',
 		description:
 			'A collaborative platform for students and teachers, featuring live video courses, a real-time whiteboard, chat, and file sharing capabilities.',
@@ -12,7 +19,7 @@ const projectsData = [
 		link: 'https://github.com/Khaled-J7/Study-Squad',
 	},
 	{
-		image: '/src/assets/project-images/BarberFactory_thumbnail.png',
+		image: barberFactoryImg, // Use the imported variable
 		title: 'BarberFactory',
 		description:
 			'A mobile application connecting clients with barbers for easy discovery and appointment booking, providing a seamless experience for both users and businesses.',
@@ -20,7 +27,7 @@ const projectsData = [
 		link: 'https://github.com/Khaled-J7/Portfolio-BarberFactory',
 	},
 	{
-		image: '/src/assets/project-images/Task_Flow_thumbnail.png',
+		image: taskFlowImg, // Use the imported variable
 		title: 'TaskFlow',
 		description:
 			'A collaborative task management system allowing users to create projects, manage tasks, assign team members, and track progress with real-time notifications.',
@@ -28,15 +35,15 @@ const projectsData = [
 		link: 'https://github.com/Khaled-J7/taskflow',
 	},
 	{
-		image: '/src/assets/project-images/AzizParfumeries_thumbnail.png',
+		image: azizParfumeriesImg, // Use the imported variable
 		title: 'Aziz Parfumeries',
 		description:
 			'A bespoke e-commerce platform designed for a premium perfume client, featuring a sophisticated product showcase, secure checkout, and user account management.',
 		tech: 'React | Django | PostgreSQL | Firebase',
-		link: 'https://github.com/Khaled-J7/AzizParfumerie',
+		link: '#',
 	},
 	{
-		image: '/src/assets/project-images/SEE_OTHER_PROJECTS_thumbnail.png',
+		image: seeMoreImg, // Use the imported variable
 		title: 'And Many More...',
 		description:
 			'My passion for building extends beyond these highlights. Explore my GitHub to see a variety of other projects, from command-line tools to smaller web apps and clones.',
@@ -48,7 +55,6 @@ const projectsData = [
 const Projects = () => {
 	const [index, setIndex] = useState(0);
 
-	// Functions to handle navigation
 	const handleNext = () => {
 		setIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
 	};
@@ -64,11 +70,9 @@ const Projects = () => {
 			<h2 className={styles.title}>My Projects</h2>
 
 			<div className={styles.carouselContainer}>
-				{/* The main viewport for the carousel */}
 				<div className={styles.carousel}>
 					<AnimatePresence>
 						{projectsData.map((project, i) => {
-							// This logic determines the position and style of each card
 							const offset =
 								(i - index + projectsData.length) % projectsData.length;
 							let zIndex = 0,
@@ -77,29 +81,24 @@ const Projects = () => {
 								opacity = 0;
 
 							if (offset === 0) {
-								// Center card
 								zIndex = 3;
 								x = '0%';
 								scale = 1;
 								opacity = 1;
 							} else if (offset === 1) {
-								// Right card
 								zIndex = 2;
 								x = '60%';
 								scale = 0.8;
 								opacity = 1;
 							} else if (offset === projectsData.length - 1) {
-								// Left card
 								zIndex = 2;
 								x = '-60%';
 								scale = 0.8;
 								opacity = 1;
 							} else {
-								// Hidden cards
 								zIndex = 1;
 								scale = 0.6;
 								opacity = 0;
-								// Position hidden cards in the center to animate from there
 								x = '0%';
 							}
 
@@ -112,7 +111,7 @@ const Projects = () => {
 									initial={{ x, scale, opacity, zIndex }}
 									animate={{ x, scale, opacity, zIndex }}
 									transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-									onHoverStart={() => setIndex(i)} // Bring card to center on hover
+									onHoverStart={() => setIndex(i)}
 								>
 									<div className={styles.cardContent}>
 										<img
@@ -151,7 +150,6 @@ const Projects = () => {
 					</AnimatePresence>
 				</div>
 
-				{/* Custom Navigation Buttons */}
 				<button className={styles.navButton} onClick={handlePrev}>
 					‹
 				</button>
