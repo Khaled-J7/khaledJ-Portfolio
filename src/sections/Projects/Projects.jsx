@@ -11,7 +11,7 @@ import seeMoreImg from '../../assets/project-images/SEE_OTHER_PROJECTS_thumbnail
 
 const projectsData = [
 	{
-		image: studySquadImg, // Use the imported variable
+		image: studySquadImg,
 		title: 'StudySquad',
 		description:
 			'A collaborative platform for students and teachers, featuring live video courses, a real-time whiteboard, chat, and file sharing capabilities.',
@@ -19,7 +19,7 @@ const projectsData = [
 		link: 'https://github.com/Khaled-J7/Study-Squad',
 	},
 	{
-		image: barberFactoryImg, // Use the imported variable
+		image: barberFactoryImg,
 		title: 'BarberFactory',
 		description:
 			'A mobile application connecting clients with barbers for easy discovery and appointment booking, providing a seamless experience for both users and businesses.',
@@ -27,7 +27,7 @@ const projectsData = [
 		link: 'https://github.com/Khaled-J7/Portfolio-BarberFactory',
 	},
 	{
-		image: taskFlowImg, // Use the imported variable
+		image: taskFlowImg,
 		title: 'TaskFlow',
 		description:
 			'A collaborative task management system allowing users to create projects, manage tasks, assign team members, and track progress with real-time notifications.',
@@ -35,7 +35,7 @@ const projectsData = [
 		link: 'https://github.com/Khaled-J7/taskflow',
 	},
 	{
-		image: azizParfumeriesImg, // Use the imported variable
+		image: azizParfumeriesImg,
 		title: 'Aziz Parfumeries',
 		description:
 			'A bespoke e-commerce platform designed for a premium perfume client, featuring a sophisticated product showcase, secure checkout, and user account management.',
@@ -43,7 +43,7 @@ const projectsData = [
 		link: '#',
 	},
 	{
-		image: seeMoreImg, // Use the imported variable
+		image: seeMoreImg,
 		title: 'And Many More...',
 		description:
 			'My passion for building extends beyond these highlights. Explore my GitHub to see a variety of other projects, from command-line tools to smaller web apps and clones.',
