@@ -62,8 +62,7 @@
 	font-family: 'Lora', serif;
 	font-size: 4.2rem;
 	padding-left: 40px;
-	/* Applying a very subtle gradient from off-white to light pink */
-	background: linear-gradient(90deg, #f4f4f5, #f9468e);
+	background: linear-gradient(90deg, #ff00cc, #c500ff);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
