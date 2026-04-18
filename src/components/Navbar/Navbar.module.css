@@ -63,11 +63,11 @@
 
 .fullName {
   font-family: "Outfit", sans-serif;
-  font-size: 0.6rem; /* Small and subtle */
+  font-size: 0.8rem; /* Small and subtle */
   color: #ffffff; /* Solid white, no gradient */
   text-transform: uppercase;
   letter-spacing: 0.15rem; /* Adds a professional "tech" feel */
-  margin-top: 5px; /* Tiny gap between KJ and name */
+  margin-top: 6px; /* Tiny gap between KJ and name */
   font-weight: 400;
   opacity: 0.7; /* Slight transparency makes it look less "shining" */
 }
