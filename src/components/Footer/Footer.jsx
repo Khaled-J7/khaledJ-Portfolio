@@ -52,16 +52,7 @@ const Footer = () => {
                 </svg>
                 <span>LinkedIn</span>
               </a>
-              <a
-                href="https://x.com/KhaledJall20"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-                <span>X</span>
-              </a>
+
               <a href="mailto:khaledjalloulidev@gmail.com">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" />
