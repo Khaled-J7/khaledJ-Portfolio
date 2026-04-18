@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Footer.module.css";
 import resumeEnPDF from "../../assets/Khaled_Jallouli_Resume_Final_eng.pdf";
 import resumeFrPDF from "../../assets/Khaled_Jallouli_CV_Francais.pdf";

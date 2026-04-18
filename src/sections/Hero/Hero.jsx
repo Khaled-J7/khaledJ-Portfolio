@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Hero.module.css";
 import profileImg from "../../assets/KhaledJallouliImg.jpg";
 import resumeEnPDF from "../../assets/Khaled_Jallouli_Resume_Final_eng.pdf";
